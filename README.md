@@ -148,9 +148,9 @@ Some companies don’t require their EC2 instances to run continuously and need 
 
 ![img-1](https://github.com/user-attachments/assets/7e7dcbc0-38d6-4bfe-a5bd-ca676cfa9aa3)
 
-8. We have to Change the Function as Stop-EC2-instance
+7. We have to Change the Function as Stop-EC2-instance
 
-9. Now, we have successfully created two schedules: one to start the instance every day at 8:00 AM and the other to stop the instance every day at 5:00 PM.
+8. Now, we have successfully created two schedules: one to start the instance every day at 8:00 AM and the other to stop the instance every day at 5:00 PM.
 
 ![img29](https://github.com/user-attachments/assets/fb1a98ac-2f1b-4619-8a17-3c422dbcfdfb)
 

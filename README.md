@@ -84,10 +84,31 @@ Some companies don’t require their EC2 instances to run continuously and need 
 ![img16](https://github.com/user-attachments/assets/aa57a851-5bcf-437b-802f-d16fa6ce8b41)
 
 ![img17 1](https://github.com/user-attachments/assets/1276a719-7147-4345-8c31-22e77dc8a54b)
-Now again , go to the Lambda console and then test the code.
+3. Now again , go to the Lambda console and then test the code.
 
 ![img17](https://github.com/user-attachments/assets/743122a8-3fa2-4e29-8d08-0d9397d8bd80)
 
+4. We have now created a Lambda function for starting the instance.
+
+5. To create a Lambda function for stopping the instance, repeat the same steps. Name this Lambda function "Stop-EC2-demo."
+
+6. The only changes required are:
+
+   - Replace the default code with the stop-ec2-instance.py code.
+   - Attach the policy we created for stopping instances to the role of this Lambda function.
+
+![img18](https://github.com/user-attachments/assets/8c142496-9dd1-47f2-b453-89f55cd32015)
+
+7. As shown earlier, when I tested the Python code, it ran successfully and stopped the instance as expected.
+
+8. Now, we are ready to proceed with creating schedules for these functions.
+
+   
+### Step 5 :
+### Creating the Schedules Using Cloud Watch :
+
+1. Navigate to the Cloud Watch Console.
+2. Follow the Outlined Steps below.
 
 
 

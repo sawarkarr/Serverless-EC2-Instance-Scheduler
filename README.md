@@ -4,7 +4,7 @@
 Some companies don’t require their EC2 instances to run continuously and need them only during working hours, such as 8:00 AM to 5:00 PM. To address this, I’ve created a serverless solution that automates the starting and stopping of EC2 instances. The process is handled by two Lambda functions—one starts the instances in the morning, and the other stops them in the evening. These functions are scheduled to run automatically using CloudWatch Events, ensuring efficiency and reducing unnecessary costs without manual intervention. This solution is fully serverless.
 
 
-![img0](https://github.com/user-attachments/assets/eedd289b-2061-44b2-a4e6-1a1c5f29ba4c)
+![img0](https://github.com/user-attachments/assets/7255f12f-3774-4bf2-bec0-a2b7d0e41b5e)
 
 ## Steps :
 
@@ -13,13 +13,13 @@ Some companies don’t require their EC2 instances to run continuously and need 
 1. Navigate to the EC2 Console.
 2. Follow the Outlined steps below.
 
-![img1](https://github.com/user-attachments/assets/749c7c75-06b2-4e21-8258-eab91fdb413c)
+![img1](https://github.com/user-attachments/assets/0c5af324-6dc1-4a55-a92f-09134ffcc29f)
 
-![img2](https://github.com/user-attachments/assets/c51a4005-f0a1-4cf6-930c-d9a0656c4a7a)
+![img2](https://github.com/user-attachments/assets/bc1ff576-ab56-4a36-9234-646755a487c1)
 
-![img3](https://github.com/user-attachments/assets/47dd0531-11db-4ff1-978b-a009df6b79bd)
+![img3](https://github.com/user-attachments/assets/22122bce-31e6-40a7-9e26-df92ec0308ae)
 
-![img4](https://github.com/user-attachments/assets/28e7e84a-d1b2-4956-a2ac-5d0fef08f069)
+![img4](https://github.com/user-attachments/assets/2cdbcfcc-ab00-4d1f-a9b0-8231b84de3c7)
 
 
 
@@ -31,22 +31,22 @@ Some companies don’t require their EC2 instances to run continuously and need 
 1. Navigate to the IAM Console.
 2. Click on "Policies" and then Click on "Create policy"
 
-![img5](https://github.com/user-attachments/assets/b685daa1-8829-4a34-a24b-12c4d182422c)
+![img5](https://github.com/user-attachments/assets/63b2f05f-8fbc-462e-9bc7-ff4753b04e1e)
 
-![img6](https://github.com/user-attachments/assets/af576492-4dd2-45ed-8f82-8306a3a72aec)
+![img6](https://github.com/user-attachments/assets/918b41b7-7154-41c6-a551-677ea1e9c707)
 
 
 3. Select services as EC2.
 4. And Actions are DescribeInstances , StartInstances.
 
 
-![img7](https://github.com/user-attachments/assets/6dc18561-0f35-4e93-9bce-206e1986b5d8)
+![img7](https://github.com/user-attachments/assets/478a5780-eb9d-4699-8a40-fe9552e386a0)
 
-![img8](https://github.com/user-attachments/assets/08c4b7ba-ed30-4349-8205-f9f641c10631)
+![img8](https://github.com/user-attachments/assets/6edd77fa-ac84-4f65-a80e-6461402c00ff)
 
-![img9](https://github.com/user-attachments/assets/00b2b125-725a-4bcf-8661-123e3bf00a3a)
+![img9](https://github.com/user-attachments/assets/16907576-f4ea-4c27-b56c-60518db4896f)
 
-![img11 2](https://github.com/user-attachments/assets/1d9e7f1f-4c12-46da-99f6-2268c6a3ba80)
+![img11 2](https://github.com/user-attachments/assets/e749c107-58ec-450c-a8de-803153ba30c4)
 
 
 5. After creating the policy for starting instances, we also need to create a policy for stopping the instances. This is because we will create two Lambda functions: one for starting and one for stopping the instances. Each Lambda function will have its own role, and we will attach the corresponding policies to their roles.
@@ -67,26 +67,27 @@ Some companies don’t require their EC2 instances to run continuously and need 
 2. Follow the Outlined steps below.
 
 
-![img11 3](https://github.com/user-attachments/assets/0e8f9afa-ad78-4afa-a76e-d6c70a3156dc)
+![img11 3](https://github.com/user-attachments/assets/fc1bf614-9e57-4463-b8dc-3f7014083bbe)
 
-![img11 4](https://github.com/user-attachments/assets/2abf31ab-9634-415e-b33d-6d209dd46cd9)
+![img11 4](https://github.com/user-attachments/assets/a9242247-21f7-463c-98a9-dc6363d5f929)
 
-![img11](https://github.com/user-attachments/assets/e6b84d5e-04ac-4fe6-b669-9c657ff72bd9)
+![img11](https://github.com/user-attachments/assets/ce295d88-7a31-456d-9c9b-418d3443d296)
 
-![img12](https://github.com/user-attachments/assets/e42959d8-addd-4114-9c96-bb1a8feb8841)
+![img12](https://github.com/user-attachments/assets/d2177d28-9dae-41e0-8b2a-ddc0856e3864)
 
-![img13](https://github.com/user-attachments/assets/00671daa-d28b-4445-b844-5bade4f9554c)
+![img13](https://github.com/user-attachments/assets/288f62db-7fbf-4614-9246-7cb9e27012a2)
 
-![img14](https://github.com/user-attachments/assets/13c22705-9b2d-4058-b60e-b6865182cf87)
+Now, test the code and then create event
+![img14](https://github.com/user-attachments/assets/7966ab44-4136-4eda-924c-06a99aa1313e)
 
-![img15](https://github.com/user-attachments/assets/ebbcce40-10f3-4a66-bdee-dc019b69180b)
+![img15](https://github.com/user-attachments/assets/b502ffd4-4b92-4e8b-9fd5-d51620ef3383)
 
-![img16](https://github.com/user-attachments/assets/aa57a851-5bcf-437b-802f-d16fa6ce8b41)
+![img16](https://github.com/user-attachments/assets/40634ced-9622-453b-895b-d9975c7f00e7)
 
-![img17 1](https://github.com/user-attachments/assets/1276a719-7147-4345-8c31-22e77dc8a54b)
+![img17 1](https://github.com/user-attachments/assets/2da03db4-049f-4533-a6fc-82779635e296)
 3. Now again , go to the Lambda console and then test the code.
 
-![img17](https://github.com/user-attachments/assets/743122a8-3fa2-4e29-8d08-0d9397d8bd80)
+![img17](https://github.com/user-attachments/assets/5cecb075-8dd2-4d4d-b6e4-7549a0e60de1)
                 As, now you can see our instance is ready in running state, if we want to test our function, we can stop instance and come again it will start our instance
 
 4. We have now created a Lambda function for starting the instance.
@@ -98,7 +99,7 @@ Some companies don’t require their EC2 instances to run continuously and need 
    - Replace the default code with the stop-ec2-instance.py code.
    - Attach the policy we created for stopping instances to the role of this Lambda function.
 
-![img18](https://github.com/user-attachments/assets/8c142496-9dd1-47f2-b453-89f55cd32015)
+![img18](https://github.com/user-attachments/assets/5dc786e8-83d2-4bb4-beca-909b59fc8b0e)
             After completion all the steps mentioned above, we can test our code. It successfully starts and stop the instance, as we can see above. Therefore we can schedule these two functions.
 
             
